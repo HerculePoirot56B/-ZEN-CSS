@@ -1,3 +1,7 @@
+* {
+    color: #fff;
+}
+
 @font-face {
     font-family: gamefont;
     src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLBT5Z1xlFQ.woff2);
@@ -87,8 +91,8 @@
 #mainLogo {
     height: 250px;
     background-color: rgba(255,255,255, 0.5);
-    transform: scale(0.8);
-    content: url(https://cdn.discordapp.com/attachments/809026786079277086/831459671784030259/modlogo_2.png);
+    transform: scale(1);
+    content: url(https://cdn.discordapp.com/attachments/830001716791345182/831511969289994280/zen.png);
     transition: 0.3s;
     border-radius: 20px;
 }
@@ -112,8 +116,9 @@
 
 
 #aContainer {
+    content: url('https://cdn.discordapp.com/attachments/809026786079277086/831580001840136302/unknown.png');
     position: fixed;
-    transform: scale(0.8);
+    transform: scale(0.9);
     bottom: 0%;
     z-index:9999999999;
 }
@@ -134,47 +139,24 @@
 }
 
 .onMenu #instructions {
-    display: none;
+    content:url(https://cdn.discordapp.com/attachments/809026786079277086/831466081062879240/911-9117890_zen-transparent-image-zen-circle-transparent.png); 
+    transform: scale(0.6)translateX(-700px)translateY(-575px);
+
 }
 
-#leaderDisplay {
-    background-color: #0a054ea6;
-}
-
-
-
-.twitch {
-    display: none;
-    
-}
-
-.youtube {
-    display: inline-block;
-}
-
-.esports {
-    display: inline-block;
-}
 
 #menuWindow {
-    color: white !important;
-    position: fixed;
-    z-index: 999999;
-    max-height: 700px;
-    transition: 0.5s;
-
-}
-#menuWindow:hover {
-    color: white !important;
-    position: fixed;
-    z-index: 999999;
-    max-height: 700px;
-
-
+    transition: 0.3s;
+    background-color: var(--theme);
+    box-shadow: 0 0 8px 2px var(--theme);
 }
 
-#menuWindow::-webkit-scrollbar-track {
-  background: transparent;
+.settName, .settNameSmall {
+    color: rgba(255,255,255,1);
+}
+
+.settName.b {
+    color: var(--theme) !important;
 }
 
 #menuWindow div[style="color:rgba(0,0,0,0.3);margin-top:-5px;margin-bottom:10px"] {
@@ -185,21 +167,34 @@
     color: rgba(255,255,255,1) !important;
 }
 
+
+#menuWindow [style*="rgba(0,0,0,0.3)"], #menuWindow [style*="rgba(0,0,0,0.4)"], #menuWindow [style*="rgba(0,0,0,0.5)"], #menuWindow [style*="rgba(0,0,0,0.8)"]  {
+    color: rgba(255,255,255,1) !important;
+}
+
+
 #menuWindow [style*="#000"] {
+    color: #ffffff !important;
+}
+
+#menuWindow [style="color:#2196F3"] {
+    color: #ffffff !important;
+}
+
+.floatR span[style="color:rgba(0,0,0,0.5)"] {
+    color: #ffffff !important;
+}
+
+.menuTabNew {
+    color: #fff;
+}
+
+#menuWindow [style*="rgba(0,0,0,0.6)"] {
     color: #fff !important;
 }
 
-
-#menuWindow .settText[style*="#292929"], #menuWindow .wepLink[style*="#292929"] {
-    filter: drop-shadow(0px 0px 2px var(--theme)) drop-shadow(0px 0px 4px var(--theme));
-}
-
-*::-webkit-scrollbar {
-    display: none;
-}
-
-
 #settName {
+    color: #fff
     z-index:9999999;
     opacity: 1;
 }
@@ -467,8 +462,6 @@
 }
 
 #spectButton .switchsml {
-    margin: auto;
-    position: absolute;
 }
 
 
@@ -483,13 +476,12 @@
     transition-duration: 0.25s;
     margin: auto;
     transform: translateY(-30px);
-   transform: translateY(12px)scale(2) translateX(38px);
+   transform: translateY(-500px)scale(2) translateX(-65px);
 }
 
 input:checked+.sliderSml::before {
-    content: "Spectating";
-    margin: auto;
-   transform: translateY(12px)scale(2) translateX(35px);
+   content: "Spectating";
+   transform: translateY(-500px)scale(2) translateX(-70px);
 }
 
 input:checked+.sliderSml {
@@ -501,70 +493,22 @@ input:checked+.sliderSml {
 }
 
 #spectButton {
-  width: 250px;
-  height: 100px;
+  width: 0px;
+  height: 0px;
   background-color: rgb(0, 0 ,40 , 10%) !important;
   box-shadow: none !important;
   color: white;
+  position: absolute;
   border: 2px solid #fff;
   cursor: pointer;
-  position: relative;
   z-index: 0;
-  margin-left: 20px;
+  margin-left: 925px;
+  margin-bottom: 400px;
   transition: 0.2s;
-  transform: scale(1.4);
+  transform: scale(1.4)translateY(-500px);
   opacity: 0.9;
-  -moz-box-shadow: 5px 15px 5px 0px #000;
-  -webkit-box-shadow: 5px 15px 5px 0px #000;
-  box-shadow: 5px 15px 5px 0px #000;
-  margin-bottom: 10px;
 
 }
-#spectButton:hover {
-  background-color: rgb(0, 0 ,40 , 100%) !important;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  transition: 0.2s;
-  transform: scale(1.1);
-  -moz-box-shadow: 5px 15px 5px 0px #000;
-  -webkit-box-shadow: 5px 15px 5px 0px #000;
-  box-shadow: 5px 15px 5px 0px #000;
-  margin-bottom: 10px;  
-}
-
-#spectButton::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: 0;
-    height: 0;
-    background: transparent;
-    border: 6px solid transparent;
-}
- 
-#spectButton:hover::before {
-    animation: animate 0.3s linear forwards;
-}
-
-#spectButton::after {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: 0;
-    height: 0;
-    background: transparent;
-    border: 6px solid transparent;
-}
- 
-#spectButton:hover::after {
-    animation: animates 0.3s linear forwards;
-    background-color:rgb(0, 0 ,40 , 100%);
-    z-index: -1;
-}
-
 /* END OF HEADER */
 
 /*ACC*/
@@ -573,12 +517,11 @@ input:checked+.sliderSml {
     color: #fff;
 }
 .accountButton {
-  width: 250px;
+  width: 200px;
   box-shadow: none !important;
   border: 2px solid #fff;
   cursor: pointer;
   z-index: 0;
-  margin-left: 75px;
   transition: 0.2s;
   transform: scale(1);
 
@@ -590,7 +533,7 @@ input:checked+.sliderSml {
   position: relative;
   z-index: 0;
   transition: 0.2s;
-  transform:scale(1.1);
+  transform:scale(1);
   -moz-box-shadow: 5px 15px 5px 0px #000;
   -webkit-box-shadow: 5px 15px 5px 0px #000;
   box-shadow: 5px 15px 5px 0px #000;
@@ -831,38 +774,8 @@ input:checked+.slider {
     border-radius: 0;
 }
 
-input:checked+.slider:before {
-    transform: translateX(36px);
-    box-shadow: inset 0 0 0 4px #fff;
-}
-
-.switch2 {
-    width: 48px;
-}
-
-.slider2 {
-    border-radius: 0;
-}
-
-input:checked+.slider2 {
-}
-
-
-input[type=color] {
-    width: 60px;
-    border-color: var(--theme);
-}
 /* OK */
 
-
-.switch {
-  box-shadow: none !important;
-  cursor: pointer;
-  z-index: 0;
-  transition: 0.2s;
-  transform: scale(1);
-
-}
 
 .switch:hover {
   background-color: rgb(0, 0 ,40 , 100%) !important;
@@ -870,7 +783,7 @@ input[type=color] {
   position: relative;
   z-index: 0;
   transition: 0.2s;
-  transform:scale(1.1);
+  transform:scale(1);
   -moz-box-shadow: 5px 15px 5px 0px #000;
   -webkit-box-shadow: 5px 15px 5px 0px #000;
   box-shadow: 5px 15px 5px 0px #000;
@@ -880,8 +793,8 @@ input[type=color] {
 .switch::before {
     content: "";
     position: absolute;
-    top: -2px;
-    left: -2px;
+    top: -4px;
+    left: -4px;
     width: 0;
     height: 0;
     background: transparent;
@@ -896,7 +809,7 @@ input[type=color] {
     content: "";
     position: absolute;
     top: -2px;
-    left: -2px;
+    left: -4px;
     width: 0;
     height: 0;
     background: transparent;
